@@ -1,3 +1,35 @@
-h1{
-    color: rgb(121, 0, 0);
+@import url('https://fonts.googleapis.com/css2?family=Gluten&family=Noto+Sans&display=swap');
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+body{
+    background-image: url('../images/food.png');
+}
+.btn{
+    font-family: "Noto Sans";
+    margin-left: 10px;
+}
+select{
+    font-family: "Noto Sans";
+}
+.navbar{
+    font-family: "Noto Sans";
+    box-shadow: black 0 0 2px;
+}
+label{
+    font-size: 1.5rem;
+    margin-right: .4rem;
+    margin-left: 2rem;
+    font-family: "Gluten";
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 94px 334px;
+    font-family: "Noto Sans";
 }
