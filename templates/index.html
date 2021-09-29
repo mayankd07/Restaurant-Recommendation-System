@@ -1,25 +1,21 @@
 {% extends 'base.html' %}
 {% block body %}
     
-    
 <div class="container center">
-  <form action="/" method="post" name="select">
-  <label for="city">Choose a city: </label>
-  <select name="city" id="city" title="Choose your city" required="true" form="select">
-    <option value="Indore">Indore</option>
-  <option value="Bhopal">Bhopal</option>
-  <option value="Neemuch">Neemuch</option>
-  <option value="Ujjain">Ujjain</option>
-  </select>
-  <label for="restaurant">Choose a restaurant: </label>
-  <select name="restaurant" id="restaurant" title="choose the restaurant" required="true" form="select">
-    <option value="Nafees">Nafees</option>
-    <option value="Chotiwala">Chotiwala</option>
-    <option value="Apna Avenue">Apna Avenue</option>
-    <option value="Suffa">Suffa</option>
-  </select>
-  <!-- <br> -->
-  <button type="submit" class="btn btn-sm btn-dark">Submit</button>
+  <form method="POST">
+    {{ form.csrf_token }}
+    <div class="form-group">
+      <label for="city">Choose a city: </label>
+      {{ form.city(class = "form-control city") }}
+    </div>
+    <div class="form-group">
+      <label for="restaurant">Choose a restaurant: </label>
+      {{ form.restaurant(class = "form-control restaurant") }}
+    </div>
+    <div class="container">
+
+      <input type="submit" class="btn btn-success">
+    </div>
 </form>
 </div>
 <div class="result center">
@@ -34,4 +30,8 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  
 {% endblock body %}

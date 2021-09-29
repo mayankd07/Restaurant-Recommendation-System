@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/styles.css')}}">
-    <script src="{{url_for('static', filename = 'js/app.js')}}"></script>
+    
 
     <title>Restaurant Recommendation System</title>
   </head>
@@ -33,5 +33,6 @@
 {% block body %}
     
 {% endblock body %}
+<script src="{{url_for('static', filename = 'js/app.js')}}"></script>
 </body>
 </html>

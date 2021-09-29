@@ -10,7 +10,7 @@ body{
 }
 .btn{
     font-family: "Noto Sans";
-    margin-left: 10px;
+    margin-top: 10px;
 }
 select{
     font-family: "Noto Sans";
@@ -20,9 +20,9 @@ select{
     box-shadow: black 0 0 2px;
 }
 label{
-    font-size: 1.5rem;
-    margin-right: .4rem;
-    margin-left: 2rem;
+     font-size: 1.5rem;
+    /* margin-right: .4rem;
+    margin-left: 2rem;  */
     font-family: "Gluten";
 }
 .result{
