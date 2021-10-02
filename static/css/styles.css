@@ -5,6 +5,9 @@
     justify-content: center;
     margin-top: 20px;
 }
+.form-control{
+    width: 480px;
+}
 body{
     background-image: url('../images/food.png');
 }

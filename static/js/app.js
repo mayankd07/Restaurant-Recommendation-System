@@ -13,7 +13,7 @@ city_select.onchange =()=>{
             let optionHTML = '';
             //appending the restaurant names in the string
             for( let restaurant of data.restaurants){
-                optionHTML+='<option value = "' + restaurant.id + '">' + restaurant.name +'</option>';
+                optionHTML+='<option value = "' + restaurant.id + '">' + restaurant +'</option>';
             }
             //showing these restaurants in the second dropdown
             restaurant_select.innerHTML = optionHTML;

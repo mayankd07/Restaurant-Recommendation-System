@@ -1,9 +1,11 @@
+from enum import unique
 from flask import Flask, json, render_template, jsonify
 from pymongo import  collection, cursor
 from wtforms import SelectField
 from flask_wtf import FlaskForm
 import dns
 import pymongo
+import certifi
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
@@ -11,7 +13,7 @@ app.config['SECRET_KEY'] = 'cairocoders-ednalan'
 restaurantNames = []
 cityNames = []
 try:
-    mongo = pymongo.MongoClient("mongodb+srv://kushal:kushal@restaurant-recommendati.p96gs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    mongo = pymongo.MongoClient("mongodb+srv://kushal:kushal@restaurant-recommendati.p96gs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",tlsCAFile=certifi.where())
     mongo.server_info() #Triggers exception if can't connect to database
     # initializing the database
     db = mongo.restaurant
@@ -22,6 +24,7 @@ try:
     # appending all the restaurant names inside this list
     for doc in cursor:
         restaurantNames.append(doc["showName"])
+    restaurantNames.sort()    
   
 
 
@@ -31,7 +34,7 @@ except Exception as e:
     
 class Form(FlaskForm):
     #the first dropdown 
-    city = SelectField('city', choices=[('restaurant_indore', 'Indore'), ('restaurant_bhopal', 'Bhopal'), ('restaurant_pune', 'Pune'), ('restaurant_bengalore', 'Bengalore')])
+    city = SelectField('city', choices=[('restaurant_indore', 'Indore'), ('restaurant_bhopal', 'Bhopal'), ('restaurant_pune', 'Pune'), ('restaurant_bangalore', 'Bangalore'), ('restaurant_mumbai', 'Mumbai'), ('restaurant_hyderabad', 'Hyderabad'), ('restaurant_delhi', 'Delhi'), ('restaurant_chennai', 'Chennai')])
     # second droppdown
     restaurant = SelectField('restaurant', choices = [])
 
@@ -46,13 +49,11 @@ def home():
 
 @app.route("/restaurant/<city>")
 def restaurantByCityName(city):
-    #Code for testing purposes
-    if city == "restaurant_bengalore":
-        return jsonify({'restaurants': [{'id': 2313, 'name': 'Restaurant 1', 'link': 'jsdhbjsa'}, {'id': 3434, 'name': 'Restaurant 2', 'link': 'dsadas'}]})
-
+    
     # getting the required collection based on user's choice of city     
     collection = db.get_collection(city)
     restaurants = []
+    uniqueRestaurants=set()
     cursor = collection.find({})
 
     for doc in cursor:
@@ -61,8 +62,10 @@ def restaurantByCityName(city):
         obj["link"] = doc["link"]
         obj["id"] = str(doc["_id"])
         restaurants.append(obj)
+        uniqueRestaurants.add(doc["showName"])
+         
     # returning the required restaurant names as list of json objects so that to update the second dropdown menu dynamically 
-    return jsonify({'restaurants':restaurants})    
+    return jsonify({'restaurants':sorted(uniqueRestaurants)})    
 
 if __name__ == "__main__":
     app.run(debug=True, port = 8000)
