@@ -6,6 +6,7 @@ from flask_wtf import FlaskForm
 import dns
 import pymongo
 import certifi
+from restaurant_recommender.gurugram import get_recommendation_gurugram 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
@@ -34,8 +35,8 @@ except Exception as e:
     
 class Form(FlaskForm):
     #the first dropdown 
-    city = SelectField('city', choices=[('restaurant_indore', 'Indore'), ('restaurant_bhopal', 'Bhopal'), ('restaurant_pune', 'Pune'), ('restaurant_bangalore', 'Bangalore'), ('restaurant_mumbai', 'Mumbai'), ('restaurant_hyderabad', 'Hyderabad'), ('restaurant_delhi', 'Delhi'), ('restaurant_chennai', 'Chennai')])
-    # second droppdown
+    city = SelectField('city', choices=[('restaurant_indore', 'Indore'), ('restaurant_bhopal', 'Bhopal'), ('restaurant_pune', 'Pune'), ('restaurant_bangalore', 'Bangalore'), ('restaurant_mumbai', 'Mumbai'), ('restaurant_hyderabad', 'Hyderabad'), ('restaurant_delhi', 'Delhi'), ('restaurant_chennai', 'Chennai'), ('restaurant_noida', 'Noida'), ('restaurant_ahmedabad', 'Ahmedabad'), ('restaurant_ajmer', 'Ajmer'),('restaurant_chandigarh', 'Chandigarh'), ('restaurant_gurugram', 'Gurugram')])
+    # second dropdown
     restaurant = SelectField('restaurant', choices = [])
 
 # defining home route
@@ -64,8 +65,9 @@ def restaurantByCityName(city):
         restaurants.append(obj)
         uniqueRestaurants.add(doc["showName"])
          
-    # returning the required restaurant names as list of json objects so that to update the second dropdown menu dynamically 
+    # returning the required restaurant names as a set so that to update the second dropdown menu dynamically 
     return jsonify({'restaurants':sorted(uniqueRestaurants)})    
+
 
 if __name__ == "__main__":
     app.run(debug=True, port = 8000)
