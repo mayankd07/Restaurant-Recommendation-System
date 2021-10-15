@@ -7,6 +7,11 @@ import dns
 import pymongo
 import certifi
 from restaurant_recommender.gurugram import get_recommendation_gurugram 
+from flask import request, render_template
+import pickle
+import pandas as pd
+import pathlib
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
@@ -53,21 +58,48 @@ def restaurantByCityName(city):
     
     # getting the required collection based on user's choice of city     
     collection = db.get_collection(city)
-    restaurants = []
-    uniqueRestaurants=set()
+    restaurants = set()
     cursor = collection.find({})
 
     for doc in cursor:
-        obj ={}
-        obj["name"] = doc["showName"]
-        obj["link"] = doc["link"]
-        obj["id"] = str(doc["_id"])
-        restaurants.append(obj)
-        uniqueRestaurants.add(doc["showName"])
+        # obj ={}
+        # obj["name"] = doc["showName"]
+        # obj["link"] = doc["link"]
+        # obj["id"] = str(doc["_id"])
+        restaurants.add(doc["showName"])
+        # uniqueRestaurants.add(restaurants)
+    uniqueRestaurants = list(restaurants)   
+    uniqueRestaurants.sort() 
          
     # returning the required restaurant names as a set so that to update the second dropdown menu dynamically 
-    return jsonify({'restaurants':sorted(uniqueRestaurants)})    
+    return jsonify({'restaurants':uniqueRestaurants})    
 
+
+
+@app.route("/restaurant/<cityName>/<restaurantName>")
+def getRecommendation(cityName, restaurantName):
+
+    restaurantName = " After Stories"
+    abspathCosine = pathlib.Path("restaurant_recommender/files/cosine_sim_"+cityName[11:]+".pickle").absolute()
+    abspathIndices = pathlib.Path("restaurant_recommender/files/indices_"+cityName[11:]+".csv").absolute()
+
+    recommended_restaurant = []  
+    indices = pd.read_csv(abspathIndices)
+    indices = indices["name"]
+    with open(abspathCosine, 'rb') as f:
+
+        cosine_sim = pickle.load(f)
+    # restaurant match indices
+    idx = indices[indices == restaurantName].index[0]
+    # similarity scores
+    score_series = pd.Series(cosine_sim[idx]).sort_values(ascending = False)
+    # top n
+    top_n_indexes = list(score_series.iloc[1:11].index)
+    for i in top_n_indexes:
+        recommended_restaurant.append(list(indices)[i])
+     #df = pd.DataFrame(recommended_restaurant)   
+    print(recommended_restaurant)
+    return jsonify({"recommendedRestaurants":recommended_restaurant})
 
 if __name__ == "__main__":
     app.run(debug=True, port = 8000)

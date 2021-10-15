@@ -2,7 +2,7 @@
 {% block body %}
     
 <div class="container center">
-  <form method="POST">
+  <form method="POST" onsubmit="restaurantSubmit()">
     {{ form.csrf_token }}
     <div class="form-group">
       <label for="city">select a city: </label>
@@ -14,7 +14,7 @@
     </div>
     <div class="container">
 
-      <input type="submit" class="btn btn-success">
+      <input type="submit" class="btn btn-success" >
     </div>
 </form>
 </div>
