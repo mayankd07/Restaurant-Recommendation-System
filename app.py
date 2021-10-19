@@ -6,82 +6,84 @@ from flask_wtf import FlaskForm
 import dns
 import pymongo
 import certifi
-from restaurant_recommender.gurugram import get_recommendation_gurugram 
+# from restaurant_recommender.gurugram import get_recommendation_gurugram 
 from flask import request, render_template
 import pickle
 import pandas as pd
 import pathlib
+from flask_cors import CORS, cross_origin
+
+
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
+cors = CORS(app, resources={r"/foo": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 
-restaurantNames = []
-cityNames = []
+
+cityNames = [
+    "restaurant_indore",
+    "restaurant_bhopal",
+    "restaurant_pune",
+    "restaurant_bangalore",
+    "restaurant_mumbai",
+    "restaurant_hyderabad",
+    "restaurant_delhi",
+    "restaurant_chennai",
+    "restaurant_noida",
+    "restaurant_ahmedabad",
+    "restaurant_ajmer",
+    "restaurant_gurugram",
+  ]
+cityRestaurants = {}
 try:
     mongo = pymongo.MongoClient("mongodb+srv://kushal:kushal@restaurant-recommendati.p96gs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",tlsCAFile=certifi.where())
     mongo.server_info() #Triggers exception if can't connect to database
     # initializing the database
     db = mongo.restaurant
     # reffering to the first collection in the database 
-    collection = db.restaurant_indore
-    cursor = collection.find({})
-    
+    for i in cityNames:
+        restaurantNames = []
+        collection = db.get_collection(i)
+        cursor = collection.find({})
     # appending all the restaurant names inside this list
-    for doc in cursor:
-        restaurantNames.append(doc["showName"])
-    restaurantNames.sort()    
+        for doc in cursor:
+            restaurantNames.append(doc["showName"])
+        uniqueRestaurantNames = list(set(restaurantNames))
+        uniqueRestaurantNames.sort()
+
+        cityRestaurants[i] = uniqueRestaurantNames   
+    
   
 
 
 except Exception as e:
     # print("Error -- Cannot connect to database")
     print(e)
-    
-class Form(FlaskForm):
-    #the first dropdown 
-    city = SelectField('city', choices=[('restaurant_indore', 'Indore'), ('restaurant_bhopal', 'Bhopal'), ('restaurant_pune', 'Pune'), ('restaurant_bangalore', 'Bangalore'), ('restaurant_mumbai', 'Mumbai'), ('restaurant_hyderabad', 'Hyderabad'), ('restaurant_delhi', 'Delhi'), ('restaurant_chennai', 'Chennai'), ('restaurant_noida', 'Noida'), ('restaurant_ahmedabad', 'Ahmedabad'), ('restaurant_ajmer', 'Ajmer'),('restaurant_chandigarh', 'Chandigarh'), ('restaurant_gurugram', 'Gurugram')])
-    # second dropdown
-    restaurant = SelectField('restaurant', choices = [])
 
 # defining home route
-@app.route("/", methods =['GET', 'POST'])
-def home():
-    form = Form()
-    # form.city.choices = ['Indore', 'Bhopal', 'Pune', 'Chennai', 'Bengalore']
-    # giving the starting restaurant names to the second dropdown i.e, indore restaurant names
-    form.restaurant.choices = restaurantNames
-    return render_template('index.html', form = form)
+# @app.route("/", methods =['GET', 'POST'])
+# def home():
 
-@app.route("/restaurant/<city>")
-def restaurantByCityName(city):
-    
-    # getting the required collection based on user's choice of city     
-    collection = db.get_collection(city)
-    restaurants = set()
-    cursor = collection.find({})
+   
+#     return render_template('index.html')
 
-    for doc in cursor:
-        # obj ={}
-        # obj["name"] = doc["showName"]
-        # obj["link"] = doc["link"]
-        # obj["id"] = str(doc["_id"])
-        restaurants.add(doc["showName"])
-        # uniqueRestaurants.add(restaurants)
-    uniqueRestaurants = list(restaurants)   
-    uniqueRestaurants.sort() 
-         
-    # returning the required restaurant names as a set so that to update the second dropdown menu dynamically 
-    return jsonify({'restaurants':uniqueRestaurants})    
+@app.route("/api/data")
+@cross_origin(origin='*')
+def getData():
+    return jsonify({'restaurants': cityRestaurants})
+
 
 
 
 @app.route("/restaurant/<cityName>/<restaurantName>")
+@cross_origin(origin='*')
 def getRecommendation(cityName, restaurantName):
 
-    restaurantName = " After Stories"
-    abspathCosine = pathlib.Path("restaurant_recommender/files/cosine_sim_"+cityName[11:]+".pickle").absolute()
-    abspathIndices = pathlib.Path("restaurant_recommender/files/indices_"+cityName[11:]+".csv").absolute()
+    restaurantName = ' '+restaurantName
+    abspathCosine = pathlib.Path("files/cosine_sim_"+cityName+".pickle").absolute()
+    abspathIndices = pathlib.Path("files/indices_"+cityName+".csv").absolute()
 
     recommended_restaurant = []  
     indices = pd.read_csv(abspathIndices)
