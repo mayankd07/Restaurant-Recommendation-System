@@ -1,26 +1,15 @@
 import React, { useState } from "react";
-import { useGetReastaurantsQuery } from "../services/restaurantDataApi";
-import { cities ,baseUrl } from "../constants";
+import { Link } from "react-router-dom";
+import Navbar from './Navbar.jsx'
+import { useGetRestaurantsQuery } from "../services/restaurantDataApi";
+import { cities } from "../constants";
 
 const Home = () => {
-  const { data, error, isLoading } = useGetReastaurantsQuery();
-  const [recommendedRestaurants, setRecommendedRestaurant] = useState({})
-  const postRestaurant = (e) => {
-    fetch(
-      `${baseUrl}/restaurant/${selectedCity}/${selectedRestaurant}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setRecommendedRestaurant(data)
-      });
-    e.preventDefault()
-  };
-  console.log(recommendedRestaurants)
-
-  
+  const { data, error, isLoading } = useGetRestaurantsQuery();  
   const [selectedRestaurant, setRestaurant] = useState("");
   const [selectedCity, setCity] = useState("");
   const [restaurantList, setList] = useState([]);
+  
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -29,10 +18,11 @@ const Home = () => {
   }
   else {
     return (
+      <>
+      <Navbar/>
       <div className="container center">
-        <form method="GET" onSubmit={postRestaurant} >
           <div className="form-group">
-            <label>select a city: </label>
+            <label>Select a city: </label>
             <div className="col-6">
               <h5 className="input-1">
                 <select
@@ -88,12 +78,12 @@ const Home = () => {
             </div>
           </div>
           <div className="container">
-            <button type="submit" className="btn btn-success">
-              Submit
+            <button className="btn btn-success">
+              <Link to={selectedCity === "" || selectedRestaurant === "" ? "/" : `/recommedation/${selectedCity}/${selectedRestaurant}` } >Submit</Link>
             </button>
           </div>
-        </form>
       </div>
+      </>
     );
   }
 };

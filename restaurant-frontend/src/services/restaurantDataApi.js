@@ -3,14 +3,17 @@ import { baseUrl } from "../constants";
 
 const createRequest = (url) => ({ url });
 
-export const reastaurantApi = createApi({
-    reducerPath: 'reastaurantApi',
+export const restaurantApi = createApi({
+    reducerPath: 'restaurantApi',
     baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
     endpoints: (builder) => ({
-        getReastaurants: builder.query({
+        getRestaurants: builder.query({
             query: () => createRequest(`/api/data`),
+        }),
+        getRecommendedRestaurants: builder.query({
+            query: ({city, restaurant}) => createRequest(`/restaurant/${city}/${restaurant}`),
         }),
         
     }),
 });
-export const { useGetReastaurantsQuery } = reastaurantApi;
+export const { useGetRestaurantsQuery, useGetRecommendedRestaurantsQuery } = restaurantApi;

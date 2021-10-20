@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { reastaurantApi } from "./services/restaurantDataApi";
+import { restaurantApi } from "./services/restaurantDataApi";
 
 export default configureStore({
     reducer: {
-        [reastaurantApi.reducerPath]: reastaurantApi.reducer,
+        [restaurantApi.reducerPath]: restaurantApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(reastaurantApi.middleware),
+        getDefaultMiddleware().concat(restaurantApi.middleware),
 })
