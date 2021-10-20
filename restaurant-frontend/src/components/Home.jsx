@@ -1,54 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useGetReastaurantsQuery } from "../services/restaurantDataApi";
+import { cities ,baseUrl } from "../constants";
 
 const Home = () => {
-  const [data, setData] = useState({});
-
-  useEffect(() => {
-    fetch(`http://localhost:8000/api/data`)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
-  },[]);
-  const[recommendedRestaurants, setRecommendedRestaurant] = useState({})
+  const { data, error, isLoading } = useGetReastaurantsQuery();
+  const [recommendedRestaurants, setRecommendedRestaurant] = useState({})
   const postRestaurant = (e) => {
-      
     fetch(
-        
-      `http://localhost:8000/restaurant/${selectedCity}/${selectedRestaurant}`
+      `${baseUrl}/restaurant/${selectedCity}/${selectedRestaurant}`
     )
       .then((response) => response.json())
       .then((data) => {
-        //   setData(data)
-        // console.log(data.recommendedRestaurants);
         setRecommendedRestaurant(data)
       });
-      e.preventDefault()
+    e.preventDefault()
   };
   console.log(recommendedRestaurants)
 
-  const cities = [
-    "Indore",
-    "Bhopal",
-    "Pune",
-    "Bangalore",
-    "Mumbai",
-    "Hyderabad",
-    "Delhi",
-    "Chennai",
-    "Noida",
-    "Ahmedabad",
-    "Ajmer",
-    "Gurugram",
-  ];
+  
   const [selectedRestaurant, setRestaurant] = useState("");
   const [selectedCity, setCity] = useState("");
   const [restaurantList, setList] = useState([]);
-
-  if (data) {
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  if (error) {
+    return <div>Oops, an error occured</div>;
+  }
+  else {
     return (
       <div className="container center">
-        <form method="GET" onSubmit={postRestaurant} > 
+        <form method="GET" onSubmit={postRestaurant} >
           <div className="form-group">
             <label>select a city: </label>
             <div className="col-6">
@@ -58,7 +40,6 @@ const Home = () => {
                   onChange={(e) => {
                     var city = "restaurant_" + e.target.value.toLowerCase();
                     setCity(e.target.value.toLowerCase());
-                    // console.log(data.restaurants[city])
                     setList(data.restaurants[city]);
                   }}
                   defaultValue=""
@@ -86,7 +67,6 @@ const Home = () => {
                 <select
                   className="form-control"
                   onChange={(e) =>
-                    //   console.log(e.target.value)
                     setRestaurant(e.target.value)
                   }
                   defaultValue=""
@@ -115,9 +95,6 @@ const Home = () => {
         </form>
       </div>
     );
-  } else {
-    return <h1>Loading</h1>;
   }
 };
-
 export default Home;

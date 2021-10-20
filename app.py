@@ -1,13 +1,9 @@
 from enum import unique
-from flask import Flask, json, render_template, jsonify
+from flask import Flask, json, render_template, jsonify,request
 from pymongo import  collection, cursor
-from wtforms import SelectField
-from flask_wtf import FlaskForm
 import dns
 import pymongo
 import certifi
-# from restaurant_recommender.gurugram import get_recommendation_gurugram 
-from flask import request, render_template
 import pickle
 import pandas as pd
 import pathlib
