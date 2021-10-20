@@ -1,11 +1,14 @@
 import Home from './components/Home';
-import Navbar from './components/Navbar';
+import RecommendedRestaurant from './components/RecommendedRestaurant';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
+      <Switch>
+        <Route path="/recommedation/:cityName/:restaurantName" exact component={RecommendedRestaurant} />
+         <Route path="/" exact component={Home} />
+      </Switch>
     </div>
   );
 }
