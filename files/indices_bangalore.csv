@@ -1,253 +1,701 @@
 ,name
-0, Cafe G
-1, Biryani Blues
-3, The Great Kabab Factory
-4, Artusi Ristorante in Piazza
-5," Cocktails & Dreams, Speakeasy"
-6, Friction The Drinkery
-7, Ryu Bar
-8," The Beer Cafe, CyberHub"
-9, Burma Burma Restaurant and Tea Room
-10, Viet:nom
-11, George
-12, Dana Choga
-13, Nagai
-14, Dhaba by Claridges
-15, Naivedyam
-17, Helix - The Celestial Bar
-18, Sahib Sindh Sultan
-19, Zanotta
-20, Culture Gully
-21, Sakley's - The Mountain Cafe
-22, Karnataka
-23, Daryaganj Restaurant (Ambience Mall)
-24, Burger Hut
-25, Green House - The Beer Garden
-26, Striker Pub and Brewery
-27, Sandhouse Cafe
-28, Town Hall
-29, Vapour Grill
-30, Pra Pra Prank
-31, Big Wong
-33, Saleem Javed Rule The Rolls
-34, Fresc Co
-35, Cafe NH8
-36, Panchavati Gaurav
-37, Haldiram's
-38, Salad Days
-39, Hyatt Regency
-40, Strikers Skybar
-41, Mala-Akbari
-42, Panchgaon - Proudly Desi
-43, Punjab Grill Ambience
-44, The Whisky Bar
-45, Threesixtyone Degrees
-46, Norenj - Cocktail Kitchen Bar
-47, Dunkin' Donuts
-48, Gravity Space Bar
-49, Zambar
-51, Om Sweets
-52," Absolute Barbecues - MGF Metropolis Mall, Gurugram"
-53, Prego
-54, Johnny Rockets
-55, Cafe StayWoke
-56, Khan Chacha
-57, Om Sweets & Snacks
-58, Warehouse Cafe
-59, Culinary Blend
-60, EEST - The Westin Gurgaon
-61, After Stories
-62, Zizo
-63, Gurgaon Pub Exchange
-64, Café Rouge
-65, Prankster
-66, Saints n Sinners
-67, Not Just Paranthas
-69, The BrewHouse
-70, AMPM Ambience Mall
-71, Howzatt
-73, Bikanervala
-74, Qwinnys
-75, IHOP
-76, Keralicious
-77, The Hook
-78, People's Cafe
-79, Wokamama
-80, Swagath
-81, Oishii Wok
-82, Mainland China
-83, Mr. Mamagato
-84, rThe Nook
-85, Chaayos
-86, Brewocrat
-87, Latest Recipe
-88, Downtown - Diners & Living Beer Cafe
-89, Cervesia
-90, Paul Bakery
-91, Brewer Street
-92, Fresco
-93, Lock UP Restaurant
-94, California Pizza Kitchen
-95, Drift
-96, Dine Esty
-97, Cilantro
-98, Park Balluchi
-99, Cicchetti By Mr.Beans
-100, The Barbeque Company
-101, Firangi Bake
-102, Thai Pavilion
-103, Spaghetti Kitchen
-104, RBG Bar & Grill
-105, Asia Seven
-106, Barbeque Nation
-108, Dhaba - Estd 1986 Delhi
-109, Amaranta
-110, Sankalp Restaurant
-111, Sandburg Shakes
-112, Duty Free Vayu Bar
-113," Pepper Pot - The Terrace Café Sector 56, Gurgaon"
-114, Sublym
-115, Yum Yum Cha
-116, Dana Choga's Kitchen
-117, Dos Burros
-118, Karim's
-119, The Lobby Lounge
-120, 21 Gun Salute
-121, Dimsum Bros.
-122, The Bowl Factory
-123, Moets Coco Palm
-124, Knight Rider Junction
-125, AMPM Cafe & Bar
-126, Brick n Bean Cafe
-127, Farzi Cafe
-128, Zoe Nutrition For Life
-129, Nayab Handi
-130, Lock & Key
-131, Curry Singh Kitchen
-132, Ebisu Fine Japanese Cuisine
-133, Roots Cafe In The Park
-134, Amici Cafe
-135, Euro Grill
-136, Pirates of Grill
-137, Raise The Bar Rooftop- Clarens Hotel
-138, Blu O
-139, Farmer's Kitchen
-140, The Ancient Barbeque
-141, Hops n Brew - The Microbrewery
-142, Downtown Kitchen & Bar
-143, The Monk
-144, McDonald's
-145, Vapour Pub & Brewery
-146, 21 SHOTS
-147, The Kylin Experience
-148, The Oriental Blossom
-149, Butter Chicken Factory
-150, Indian Grill Room
-151, The Beer Cafe
-152, Biryani by Kilo
-153, Jungle Jamboree
-154, Rubicon Bar
-155, Ciclo Cafe
-156, Chin Chin
-157, Greenr Cafe
-158, Asia Alive
-159, Soy Soi
-160, Pind Balluchi
-162, The Potbelly Divine
-163, SodaBottleOpenerWala
-164, Carnatic Cafe
-165, Tunday Kababi Dastarkhwan-e-Awadh
-166, Agent Jack's Bidding Bar
-167, Cafe Delhi Heights
-170, Flip Bistro
-171, Vapour Bar Exchange
-173, The Noodle Company
-174, Kashmiri Kitchen
-175, Ministry of Beer
-176, La Pino'z Pizza
-177, Rajdhani Thali
-178, Getafix
-179, Made in Punjab
-180, GoGourmet
-181, The G.T. Road
-182, Nando's
-183, Godfather Lounge & Bistro
-184, Kitchen District
-185, Tease
-186, Soi 7 Pub & Brewery
-187, Imperfecto
-188, Di Ghent Cafe
-189, Shree Rathnam
-190, Cafe Soul Garden
-191, Hotel Malabar Restaurant
-192, Pizza Hut
-194, Open Tap
-195, Drunk Art
-196, Baba Chicken Gurgaon
-197, Adda by Striker
-198, Chull
-199, Charcoal Eats
-200, Club Rhino
-201, The Daily Curry
-202, Manhattan Bar & Brewery
-203, Nosh
-204, The Wine Company
-205, Loft by The Clocktower
-206, Berco's Gurugram
-207, Seasonal Tastes
-208, Molecule Air Bar
-209, Culina 44
-210, Olly
-211, Circus
-212, Pizza Express
-213, Wangshi's
-214, The Pasta Bowl Company
-215, Downtown Cafe
-216, Gola Sizzlers
-217, The Clock Tower
-218, Cheesy Kneads
-219, Delectable Cafe
-220, Comorin
-221, Viva All Day Dining. Bar & Lounge
-222, Oh! Calcutta
-223, Under the Neem
-224, Batli 29
-225, Bronx Bar Exchange
-226, Punjabi By Nature
-227, Hamoni: Cafe by the Greens
-228, Cyber Hub Social
-229, Philtre The Bistro
-230, Onesta
-231, Sutra Gastropub
-232, Glass House
-233, Walking Street - Soi 7
-234, Hard Rock Cafe
-235, Quaff
-236, Dhaba HR 26
-237, The California Boulevard
-238, Big Boyz Lounge
-239, 0124 Bar Exchange
-240, Saffron
-241, Diya
-242, Chili's Grill & Bar
-243, Impromptu
-244, Southpoint Carnival
-245, China Club
-246, Sorriso Kitchen
-247, Pitstop Brewpub
-248, Chai Point
-249, The Forestta
-250, The Drunken Botanist
-251, Jamie’s Pizzeria
-252, The Buck Stops Here
-253, 7 Degrees Brauhaus
-254, Nooba
-255, Spectra
-256, TCK by The China Kitchen
-257, United Coffee House Rewind
-258, Wildfire Mediterranean Restaurant
-259, The Bikers Cafe
-260, Brew Buddy
-261, Khaaja Chowk
-262, Italiano
-263, Raasta
+0, Kebabs & Kurries
+1, The Raj Pavilion
+2, Uno
+3, Shiv Sagar
+6, Waffle Magic
+7, Rasaganga
+8, Intalia
+9, 4 Seasons
+10, Cafe 60 Four
+11, Hotel Dwaraka
+12, The Biere Club
+14, Kitchen of Joy
+15, Andhra Ruchulu
+16, Tiwari's Ghee Paratha & Chai
+17, Bonsouth
+18, 1947
+20, Konark Kanteerva
+21, The Fat Fanny's Cafe
+22, Adyar Anand Bhavan Sweets
+23, Chianti Indiranagar
+24, Momo Jojo
+25, Legends of Rock
+26, Dhaba by Claridges
+27, The Marina
+28, Watson's
+30, M Cafe
+32, Slounge
+33, Pindi
+34, Sukhsagar
+35, Food Street / Thindi Bheedi
+36, Thanima
+37, Koshe Kosha - Bengali cuisine
+38, Olde Bangalore Resort & Convention Centre
+39, Doff Pub and Lounge
+40, Wow! Momo
+41, Smaash
+42, R Royal Rajasthan
+43, Matsuri
+44, Cilantro
+45, Churchill's Restobar
+46, Millers 46
+47, Salt
+48, Bierre Republic
+49, Andhra House
+50, Khaaja Chowk
+51, Tunday Kababi
+52, Elements Eatery
+53, Bay Leaf
+54, Andhra Kafe
+55, Melange
+56, 154 Breakfast Club
+57, Srinathji's Fine Dining Restaurant Indira Nagar
+58, South Indies
+60, The Irish House
+61, Cafe Buzzinga
+62, Umerkot
+63, TGIF
+65, Mtr Maiyas Restaurant
+66, Habanero
+67, Europa 360
+68, Chai Point
+70, Thalassery
+71, Lakeview Milkbar
+72, Bamey's Restro Cafe
+73, Hoppipola - All Day Bar & Bonhomie
+74, Kentacky Chicken Corner
+75, The Grub Hub
+76, Garam Naram
+77, Peacock
+78, Paradise
+80, Little Italy
+82, The Oriental Spice
+83, Chili's
+85, La Tagliatella - Bangalore
+86, The Studio Bar
+87, Cafe Rossini
+88, Foody's
+89, Huliyappa's Donne Biryani
+90, D'hide Cafe
+91, Shift
+92, Smoke House Deli
+93, Bombay Brasserie
+94, Raidan Restaurant
+95, Jimis Beer Cafe
+97, Shivbhoj
+98, Barbeque Nation
+103, Isys
+104, The Esplanade
+105, Ballal Residency Resturant
+106, Kanti Sweets
+108, Spice It
+110, Herbs and Spice Indira Nagar
+111, Nandhana Palace Indiranagar
+112, Tiffin Express
+113, Northams Pizza Pita
+114, Savi Sagar
+115, Vera Italiano
+116, Tiamo
+117, Toscano
+118, Liquid Lounge and Bar
+119, Adithya Restaurant
+120, Kabab Mandra
+121, California Burrito
+123, Puchkas
+125, New Modern Bhavan
+126, 9th MILE DHABA
+127, Tea and Wine Lounge
+128, Chicken County
+129, Sangam Sweets
+130, Chung Wah
+133, Pablo's Gastrobar
+134, Iyer Mess
+135, HwealthCafe
+136, Liber
+137, Farzi Cafe
+138, Legacy Of Punjab
+139, Herbs And Spice Restaurant
+140, Yumlok
+141, Mudde Madappa Mess
+142, Hotel Fish Land Restaurant
+143, Ajanta Restaurant
+144, KLINX
+145, Smoked Out Barbecue
+146, Onesta
+148, Vasudev Adiga's Fast Food
+151, Anjappar Chettinad
+152, Shanmukha Restaurant
+154, Smoke - The Sizzler House
+155, Adyar Ananda Bhavan
+158, Elongo's
+159, Sutra
+160, Sorse
+161, MTR
+162, ITALIA
+163, Cinnamon
+165, Tata Cha
+166, The Salt Grill
+167, Beijing Bites
+173, Havelli
+174, Oota Bangalore
+175, Kalkal Kai Ruchi
+176, Srinathji's
+177, Momoz
+178, Simply Indian
+179, Zaica Dine & Wine
+180, Fire Station
+181, Baba Chatkora
+182, Purple Haze
+183, Samarkand
+184, Sukh Sagar
+187, Teppan
+188, Chef Baker's
+189, Kamath Restaurant
+190, West Wood Restaurant
+191, Pizza Hut
+194, The Beer Cafe
+196, Fine Flavors
+197, Amruth Vegetarian
+198, Mainland China
+202, Ayda Persian Kitchen
+203, The Yellow Chilli Jayanagar
+204, Sri Krishna Sweets
+205, Le Charcoal
+206, Yak's Kitchen
+207, Burma Burma Restaurant & Tea Room
+208, Ranganna Military Hotel
+209, Enigma Pub & Restaurant
+210, 70 Brigade
+211, Cafe Pascucci
+212, New Shanti Sagar
+213, Puma Social Club
+214, Kamat Swad
+215, Sherlock Holmes Pub And Restaurant
+216, Sichuan
+217, Olive Beach
+218, Shiv Sagar Veg Restaurant
+219, Shark Food Court
+220, Satrangi
+221, Potful
+222, The Kitchen Of Joy
+223, Biso
+225, Junoon
+226, Layla
+227, Fava - The Mediterranean Restaurant & Bar
+228, Sea Spice By 7 Star
+229, Infinitea
+231, Wareabouts
+232, Eastern Diner
+233, Kamat Yatrinivas Hotel
+234, Rajdhani
+235, Sanctum
+236, Adupadi
+237, Portland Grill & Cafe
+238, Bayleaf Restaurant
+239, Freskka
+240, Achayyan's
+241, Nandhini Restaurant Jayanagar
+242, Indian Coffee House & Restaurant
+243, Kumarakom
+244, RUSSH Gastropub
+245, High Ultra Lounge
+246, Indraprastha Restaurant
+247, Juice Junction
+248, Eurasia Pasta And Barbeque
+249, Spice Curry
+250, Chutney Chang
+252, Kamat Minerva
+253, Rasa
+254, Kfc restaurant meenakshi mall bangalore
+255, Al-Bek
+256, Punjab Grill Bengaluru
+257, Kittus
+258, Rewind
+259, Justa-The Residence Indiranagar
+260, Sidewalk Kitchen & Bar
+261, Cafe Thulp
+263, Moti Mahal Delux Tandoori Trail Bangalore
+264," Auntie Fung""s"
+265, Toast and Tonic
+266, The Island
+267, Hotel Janatha Restaurant
+269, Hyderabad Biryani House
+270, S L V Corner
+271, Lumiere Organic
+272, Koshy's Bar & Restaurant
+273, Square Plate
+274, Tibetan Mother's Kitchen
+275, Punjabi Rasoi Restaurant
+276, Zingron Restaurant
+277, Nandhana Palace Rajajinagar
+278, Blue Terrain
+279, Central Jail Resturent
+280, Boca Grande
+281, Pizza Stop
+282, Singh Saab
+283, The Higher Taste
+284, Plan B
+286, Salem Kitchen
+287, Pecos Stones
+288, Domino's Pizza
+289, The Creek
+290, China Pearl
+291, Mudpipe
+292, Swadeshi Family Restaurant
+293, Up South Malleswaram Mantri Square
+294, Birinz
+295, The Black Pearl
+297, Take 5
+298, Nisarga
+299, The Only Place
+300, La Tapenade Mediterranean Cafe
+301, Goli Vada Pav No. 1
+302, The Chariot Pure Vegetarian
+303, Tim Tai
+304, BonSouth
+305, Dialogues Cafe Koramangala
+306, HQ
+307, Silbatti
+308, An Egg Story
+309, Punjabi Tadka Kadubeesanahalli
+310, Alampur Bar & Restaurant
+311, Jalsa
+313, Samaikya Restaurant
+314, Mtr 1924
+316, Subway
+318, Bottle Breacher
+319, Srinidhi Sagar
+320, Khan Saheb Grills & Rolls
+321, Majlis Restaurant
+322, La Brasserie
+323, blueFROG Bangalore
+324, Boho
+325, Daddy's Deli
+326, Prost
+327, Southindies
+328, Caesars Restaurant
+329, Jonah's
+330, The Rendezvous
+331, Xtreme Sports Bar at Tillt
+332, Chubalas
+333, Oko
+334, Indijoe Sizzlers
+335, Empire Restaurant
+337, Raaga The Family Restaurant
+338, The Coorg Food Co.
+339, Kamat Lokaruchi
+340, Hotel Panchvati Gaurav
+341, Xtreme Sports Bar & Grill
+343, Cafe @ Elanza
+344, Nammoora Thindi
+345, Vriksh
+346, Hakuna Matata
+347, Chowmein Family Restaurant
+348, Madhurai Idly Shop
+349, 6 Ballygunge Place
+350, Oye Amritsar
+351, Pavithra Restaurant
+352, New Shanti Sagar Restaurant
+353, The Eatery
+354, Three Qurarter Chinese
+355, Brew Meister - Craft Beer & Kitchen
+356, New Tandoor Restaurant
+357, 100 Feet Boutique
+358, Punjabi by Nature
+359, Byg Brewski Brewing Company
+360, Ebony Restaurant
+361, Punjabi Nukkad
+362, Cafe Le Rock
+363, Axomi
+364, Savoury Restaurant
+366, Khan Saheb
+367, By The Blue
+368, Arusuvai Arasu Madhuram
+369, SLV Ragigudda
+370, New Shanthi Sagar
+371, Mangalore Pearl
+372, Kerala Pavilion
+373, Punjabi Rasoi
+374, Holiday Village Restaurant
+375, Hotel Ajantha Restaurant
+376, Adaa
+377, Kabab Magic
+378, Pure & Natural
+379, Thalassery Restaurant
+380, Suchithra Biryani House
+381, Noble House
+382, Troika
+383, Imperial Restaurant
+385, The Grill & Curry Bowl
+386, Sunny's Restaurant
+387, Flavours
+388, Aranya
+389, Vasudev Adigas
+390, The Kebab Room - Restaurant & Brewery
+391, Riwaz
+392, Adyar Ananda Bhavan Sweets and Snacks
+393, Wanderers
+394," Adyar Anand Bhavan Sweets and Snacks, Vidyaranyapura"
+395, Bang
+396, The Square Table
+397, Ji Hazoor Restaurant
+398, Nook
+399, TBC Sky Lounge
+400, Domino S Pizza
+401, The Fort Kochi Connection
+402, News Cafe
+403, Chinita Real Mexican Food
+404, Chungs Chinese Corner
+406, Punjabi Tadka
+407, Purvi Multicuisine Family Restaurant
+408, The Dhaba Marathahalli
+409, The Lost Caravan
+410, Nakshatra Fine Dine Restaurant
+411, Uppercut
+412, Ranch at Big Banyan Vineyard & Resort
+413, Tangra
+414, Tayabbs
+415, Vasudev Adiga's
+416, The Druid Garden
+417, Udupi Deluxe
+418, Paradise Food Court
+419, The Reservoire
+420, Kadamba
+421, The Rock
+422, Treat
+423, Saatvikk
+424, The Pump House
+425, The Bel St.
+427, Udupi Park
+428, Thai chy
+429, Dreams Cafe
+430, Soi & Sake
+431, Chung's Pavilion
+432, Vitamin Palace
+433, Punjab Bistro
+434, The Chancery Pavilion
+435, Siddique Kabab Centre
+436, Karnataka Bhel House
+437, Malgudi
+438, Saarangi
+439, Plus 91
+440, Pot-O-Noodles
+441, Health Zingo
+442, Casa Piccola
+443, Saffron Vegetarian Cuisine
+444, Meghana Foods
+446, A2B - Adyar Ananda Bhavan
+448, Naachiyar's
+449, Medici
+450, Purabhi Chalo Punjab
+451, Oval Bar
+452, Banjara Melting Pot
+453, Barbecued - By The Orchard
+454, Mishmash
+455, Kaati Zone
+456, Cafe 3 Oh'3
+457, New Krishna Bhavan
+458, Eden Park Restaurant
+459, Richies Rahhams
+460, Sharief Bhai
+461, Yo! China
+463, Dublin
+464, Savoury Sea Shell
+465, Bageecha Multicuisine Family Restaurant
+466, Pappu Chaiwalla
+467, Cafe Mondo
+468," Republic Of Noodles, Lemon Tree, Ulsoor"
+469, Konark
+470, The Sai Leela Hotel Restaurant
+471, Lan Thai
+472, Brik Oven
+473, Ammis Biriyani
+474, Punjabi By Nature Express
+475, Moti Mahal & Restaurant
+476, Hyderabadi Bawarchi
+477, Citrus Cafe
+479, Margarita Lounge Bar
+480, Zero Mile Punjab Restaurant
+481, Hyderabadi Biryani
+482, Big Pitcher
+483, Tavern at the Inn
+484, Filling Station
+485, Jayamahal Palace Hotel
+486, Mango Trees
+487, Vasudev Adiga’s Nalapaka
+488, Beijing Bites Restaurant
+489, Sancho's
+490, Curry Leaves
+491, Chung Wah Restaurant
+492, Tiffin Room
+493, Rang De Basanthi
+494, South Ruchi's
+495, 7 Plates
+496, Maiyas Restaurants Pivate Limited
+497, Sarangi Express
+498, Wazirs
+499, Gullu's Chat
+500, Nizam's Biryani House
+501, Bangaliana
+502, Cafe Noir
+503, Fresh Menu
+504, Woody's
+507, Tomatina
+508, The Whiskey Bar
+509," Absolute Barbecues - BTM, Bengaluru"
+510, Laajawab
+511, Sector 7 Cafe
+512, Mayuri
+513, Monkey Bar
+514, Two Friends Cauldron
+515, 657 Wall Street
+516, Anand
+517, Mr. Idli
+518, Tandoori Taal
+519, Paradise Biriyani Hotel
+520, Euki
+521, Park Square Mall
+522, Sidewalk Cafe
+523, Village - The Soul Of India
+524, The Square - Food Outside the Box
+525, Udupi Garden
+526, Villa Pottipati
+527, Edo - Japanese Restaurant and Bar
+528, Aaha Andhra
+529, Rahham's International
+530, Bowring Institute
+531, Biergarten Brewery & Kitchen
+532, Paranda
+533, One Night In Bangkok
+534, Beyond China
+535, Deewar
+536, The Fisherman's Wharf - Bangalore City
+537, Dal Tadkaa
+538, The Bawarchi
+539, Rouge Elephant
+540, WelcomCafe Jacaranda
+541, Gokul Veg
+542, Bheema's
+543, Dum Pukht Jolly Nabobs
+544, Noodleheads
+545, Dyu Art Cafe
+546, Box8
+547, Kaayal
+548, 24@43 Coffee Shop
+549, Palmgrove
+550, Nasi and Mee
+551, Mast Kalandar
+552, The Black Rabbit
+553, Fusion Street Global Cuisine
+554, Bhagini
+555, Safe House Gastropub
+556, Priyadarshini Grand
+557, Mavalli Tiffin Room (MTR)
+558, Pingara
+559, Paratha House
+560, Murphy's Brewhouse
+561, Mai Tai Lounge
+562, Kanua
+563, Rajvardhan Foods
+564, New Shanti sagar
+565, Uphara Kendra
+566, Basavanagudi Restaurant
+567, Aagaman Veg
+568, Skyye Lounge
+569, Ruchi Restaurant
+570, The London Curry House
+571, Beijing Bites - RT Nagar
+572, WBG - Whitefield Bar and Grill
+573, ASEAN - On The Edge
+574, Mast Kalandar Koramangala
+575, Zheng
+576, Madurai Idly Shop
+577, Pecos Pub
+578, Mamagoto
+579, W Xyz
+580, Baisakhi Restaurant
+581, Gramin
+582, Up South Malleswaram Orion
+583, Sultans of Spice
+584, Red Onion
+585, Tangerine Sizzlers & More
+586, New Punjabi Food Corner
+587, Mandarin Trail
+588, Khansama
+589, Go Italia
+590, Chung's Chinese Corner
+591, Tamarind
+592, Bekal
+593, Upsouth
+594, Cafe 132
+595, bangalore bistro
+596, Vembanad
+597, Guilt Free
+598, Time Traveller
+599, Mikusu
+600, Coconut Grove
+601, The Big Barbeque
+602, XOOX Brewmill
+603, Sree Krishna Kafe
+604, Herbs & Spices
+605, Subz
+606, Salt Restaurant
+607, Zaitoon
+608, Red Rhino Craft Brewery and Inspired Kitchen
+609, Green Theory
+610, Alto Vino
+611, Mynt
+612, Kapoor's Cafe
+613," Salt- Indian Restaurant, Bar & Grill"
+614, Rasovara - The Royal Kitchen
+615, Naidu Military Hotel Restaurant
+616, Panchavati Gaurav
+617, Carrots Restaurant
+618, Tiger Trail
+620, Ssaffron
+621, The GreenPath Organic State
+622, Latitude
+623, Cafe Mozaic
+624, Brewsky
+625, Ente Keralam
+626, Monsoon
+627, Au Bon Pain
+628, Flechazo
+629, Curry With A ' K '
+630, Byblos
+631, Saffron
+632, Wabi Sabi
+633, Chavadi
+634, Shebestan
+635, The Punjabi Rasoi
+636, ShakesBierre - Brewpub & Kitchen
+637, Gilly's Restobar
+638, MTR - St. Mark's Road
+639, Harima
+640, Hype
+641, Caperberry
+643, NH 8
+644, Kudla
+645, Pinxx
+646, Konark Vegetarian Restaurant
+648, Nagarjuna Indiranagar
+649, Imli Cafe and restaurant
+650, Hunan
+651, The Nest
+652, InAzia
+653, The Hole In The Wall Cafe
+654, Gufha
+655, Samaroh
+656, Koramangala Social
+657, Bangalore Brew Works
+658, Kesariya
+659, Asia Alive
+660, Kesar Sweets
+661, Vapour Indiranagar - Pub and Brewery
+662, GoNative
+663, Yataii
+664, The Kabab Studio
+665, Byli
+666, Sante Spa Cuisine
+667, Benjarong
+668, Soul City
+669, R Bar
+670, Soho Street
+671, Uppu Munchi
+672, Caprese
+673, Pasta Street
+675, 24th Main
+676, Carnival De Goa
+677, BG's Poolside Bar & Grill
+678, Singkong
+679, Sigree Global Grill
+680, The Glass House - Deli Bistro Bar
+681, M Bar
+682, Chulha Chauki Da Dhaba
+683, Loft 38
+684, Shivaji Military Hotel
+685, Om Made Cafe
+686, Upahara Darshini
+687, The Hebbal Cafe
+688, Hangover Lounge
+689, Sly Granny
+690, MTR - Mavalli Tiffin Rooms
+691, Anjappar
+692, I Bar
+693, Caraway Kitchen
+694, Sunny's
+695, Three Dots and a Dash
+696, The Grill House
+697, 1522 - The Pub
+698, Zodiac Restaurant
+699, One Atria Cafe
+700, Whitefield Baking Company
+701, 24/7
+702, Eden Park Bar And Restaurant
+703, Highland Nectar
+704, Brahma Brews
+705, Deja Vu Restaurant and Bar
+706, Graze
+707, Om Pure Vegetarian Restaurant
+708, Bootlegger
+709, Ottimo Cucina Italiana
+710, The Fat Chef
+711, Karibu
+712, Palette
+713, A Hole Lotta Love Cafe
+714, Spice Terrace
+715, Smally's Restocafe
+716, Halli Mane
+717, Hotel Empire Restaurant
+718," Rajdhani Thali Restaurant, Bannerghatta Road, Bangalore"
+719, Once Upon A Flame
+720, The Saaga Restaurant
+721, 1947 Restaurant
+722, La Casa
+723, Bene
+724, Three Quarter Chinese
+725, fat buddha
+726, Kaapi Katte
+727, Rajdhani Thali
+728, Bricklane Grill
+729, Gateway Hotel Restaurant
+730, The Globe Grub
+731, Here and Now
+732, Eshanya
+733, Shang Palace
+734, Smokehouse Deli
+735, Taiki
+736, 100 Ft Boutique Restaurant
+737, Asia Kitchen By Mainland China
+738, Fort Kochi
+739, The Sidewalk Cafe
+740, Nagarjuna
+741, Aioli BBQ & Grill
+742, Shao
+743, The Boozy Griffin
+744, Jalpaan Restaurant
+745, Anupam's Coast II Coast
+746, Kobe Sizzlers
+747, Feast
+748, Nagarjuna Chimney
+749, Nagarjuna Restaurant
+750, JW Kitchen
+751, Bangalore Mandarin
+752, Nandhana Palace Koramangala
+753, Brew and Barbeque - Microbrewery Pub
+754, Mainland China Restaurant
+755, Indian Paratha Company
+756, Chulha Chowki Da Dhaba
+757, Buff Buffet Buff
+758, The Yogisthaan Cafe
+759, Noodle bar
+760, ALBA
+761, Social Whitefield
+762, Jalsa Gold Restaurant
+763, Indian Kitchen
+764, Hammered
+765, Rajdhani Restaurant
+766, Raghavendra Stores
+767, Shezan
+768, Kamat Restaurant

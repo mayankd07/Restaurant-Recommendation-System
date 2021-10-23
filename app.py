@@ -11,7 +11,7 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
-cors = CORS(app, resources={"/": {"origins": "*"}})
+cors = CORS(app, resources={"/foo": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
@@ -21,7 +21,6 @@ cityNames = [
     "restaurant_pune",
     "restaurant_bangalore",
     "restaurant_mumbai",
-    "restaurant_hyderabad",
     "restaurant_delhi",
     "restaurant_chennai",
     "restaurant_noida",
@@ -91,7 +90,7 @@ def getRecommendation(cityName, restaurantName):
     # top n
     top_n_indexes = list(score_series.iloc[1:6].index)
     for i in top_n_indexes:
-        temp.append(list(indices)[i])
+        temp.append(list(indices)[i])     
     for i in temp:
         recommended_restaurant[i[1:]] = restaurantUrl[city_idx][i[1:]]
 

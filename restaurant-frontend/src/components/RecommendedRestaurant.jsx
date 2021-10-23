@@ -4,10 +4,12 @@ import Navbar from './Navbar'
 import { useGetRecommendedRestaurantsQuery } from "../services/restaurantDataApi";
 
 function RecommendedRestaurant(props) {
+
     const city = props.match.params.cityName;
     const restaurant = props.match.params.restaurantName;
     const { data, error, isLoading } = useGetRecommendedRestaurantsQuery({ city: city, restaurant: restaurant });
 
+    console.log(data)
     if (isLoading) {
         return <div>Loading...</div>;
     }
@@ -18,7 +20,6 @@ function RecommendedRestaurant(props) {
         return (
             <>
                 <Navbar />
-
             </>
         )
     }

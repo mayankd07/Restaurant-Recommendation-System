@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Navbar from './Navbar.jsx'
 import { useGetRestaurantsQuery } from "../services/restaurantDataApi";
 import { cities } from "../constants";
+import Select from 'react-select';
+
 
 const Home = () => {
   const { data, error, isLoading } = useGetRestaurantsQuery();  
@@ -20,33 +22,25 @@ const Home = () => {
     return (
       <>
       <Navbar/>
-      <div className="container center">
+      <div className="container center ">
           <div className="form-group">
             <label>Select a city: </label>
             <div className="col-6">
               <h5 className="input-1">
-                <select
-                  className="form-control"
+                <Select
+                  // className="form-control"
+                  className="width"
+                  placeholder= "Select City"
+                  options = {cities.map((item)=>(
+                    {value: item, label: item}
+                  ))}
                   onChange={(e) => {
-                    var city = "restaurant_" + e.target.value.toLowerCase();
-                    setCity(e.target.value.toLowerCase());
+                    var city = "restaurant_" + e.value.toLowerCase();
+                    setCity(e.value.toLowerCase());
                     setList(data.restaurants[city]);
                   }}
-                  defaultValue=""
-                >
-                  <option disabled={true} value="">
-                    Select City
-                  </option>
-                  {cities.map((item) => (
-                    <option
-                      value={item}
-                      key={item}
-                      onChange={(e) => console.log("HELLO")}
-                    >
-                      {item}
-                    </option>
-                  ))}
-                </select>
+                  
+                />
               </h5>
             </div>
           </div>
@@ -54,26 +48,19 @@ const Home = () => {
             <label>Select a restaurant: </label>
             <div className="col-6">
               <h5 className="input-1">
-                <select
-                  className="form-control"
-                  onChange={(e) =>
-                    setRestaurant(e.target.value)
-                  }
-                  defaultValue=""
-                >
-                  <option disabled={true} value="">
-                    Select Restaurant
-                  </option>
-                  {restaurantList.map((item) => (
-                    <option
-                      value={item}
-                      key={item}
-                      onChange={(e) => console.log("HELLO")}
-                    >
-                      {item}
-                    </option>
+              <Select
+                  // className="form-control"
+                  className="width"
+                  placeholder= "Select Restaurant"
+                  options = {restaurantList.map((item)=>(
+                    {value: item, label: item}
                   ))}
-                </select>
+                  onChange={(e) =>
+                    setRestaurant(e.value)
+                  }
+                  
+                />
+                    
               </h5>
             </div>
           </div>

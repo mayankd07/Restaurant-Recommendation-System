@@ -1,14 +1,13 @@
 export const baseUrl ='http://localhost:8000';
 export const cities = [
     "Indore",
-    "Bhopal",
+    // "Bhopal",
     "Pune",
     "Bangalore",
-    "Mumbai",
-    "Hyderabad",
+    // "Mumbai",
     "Delhi",
     "Chennai",
-    "Noida",
+    // "Noida",
     "Ahmedabad",
     "Ajmer",
     "Gurugram",
