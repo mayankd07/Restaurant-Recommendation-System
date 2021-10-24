@@ -10,6 +10,7 @@ function RecommendedRestaurant(props) {
     const city = props.match.params.cityName;
     const restaurant = props.match.params.restaurantName;
     const { data, error, isLoading } = useGetRecommendedRestaurantsQuery({ city: city, restaurant: restaurant });
+    console.log(data)
     if (isLoading) {
         return <LoopCircleLoading color={'#ffffff'}
         />;

@@ -9,7 +9,7 @@ import pandas as pd
 import pathlib
 from flask_cors import CORS, cross_origin
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="restaurant-frontend/build/static", template_folder="restaurant-frontend/build")
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
 cors = CORS(app, resources={"/foo": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -57,9 +57,9 @@ except Exception as e:
     print(e)
 
 # defining home route
-# @app.route("/", methods =['GET', 'POST'])
-# def home():
-#     return render_template('index.html')
+@app.route("/")
+def home():
+    return render_template('index.html')
 
 @app.route("/api/data")
 @cross_origin(origin='*')
@@ -93,6 +93,7 @@ def getRecommendation(cityName, restaurantName):
         temp.append(list(indices)[i])     
     for i in temp:
         recommended_restaurant.append([i,restaurantUrl[city_idx][i[1:]]])
+
 
     return jsonify({"recommendedRestaurants": recommended_restaurant})
 
