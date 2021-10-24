@@ -78,7 +78,7 @@ def getRecommendation(cityName, restaurantName):
     abspathIndices = pathlib.Path("files/indices_"+cityName+".csv").absolute()
 
     temp = []
-    recommended_restaurant = {}
+    recommended_restaurant = []
     indices = pd.read_csv(abspathIndices)
     indices = indices["name"]
     with open(abspathCosine, 'rb') as f:
@@ -92,7 +92,7 @@ def getRecommendation(cityName, restaurantName):
     for i in top_n_indexes:
         temp.append(list(indices)[i])     
     for i in temp:
-        recommended_restaurant[i[1:]] = restaurantUrl[city_idx][i[1:]]
+        recommended_restaurant.append([i,restaurantUrl[city_idx][i[1:]]])
 
     return jsonify({"recommendedRestaurants": recommended_restaurant})
 

@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(164, 2, 31);
+  
 }
 
 
@@ -15,28 +17,13 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
-.form-control{
-    width: 480px;
-}
-body{
-    background-image: url('images/food.png');
-}
-.btn{
-    font-family: "Noto Sans";
-    margin-top: 10px;
-}
-select{
-    font-family: "Noto Sans";
-}
 .navbar{
     font-family: "Noto Sans";
     box-shadow: black 0 0 2px;
 }
-label{
-     font-size: 1.5rem;
-    /* margin-right: .4rem;
-    margin-left: 2rem;  */
-    font-family: "Gluten";
+.max-width{
+    width: 100% !important;
+    align-items: center;
 }
 .result{
     display: flex;
@@ -46,6 +33,65 @@ label{
     margin: 94px 334px;
     font-family: "Noto Sans";
 }
-.width{
-    width: 480px;
+
+
+.box {
+    margin: auto 0;
+}
+.content {
+    margin: 2rem;
+    text-align: center !important;
+    color: white;
+}
+.col-md-6 {
+    margin: auto;
+}
+.front-image {
+    margin: 1rem;
+    width: 80%;
+}
+.select{
+    color: black;
+}
+a{
+    color: black !important;
+    text-decoration: none;
+    
+}
+.btn-success{
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 2rem;
+}
+a.btn {
+    margin: 17.5px 25px;
+    border: 0 !important;
+    margin: 1rem;
+}
+.btn:hover{
+    background-color: black;
+    
+}
+a:hover{
+color: whitesmoke !important;
+}
+.heading{
+    margin: 32px 0px 32px 0px !important;
+}
+button:disabled{
+    background-color: rgb(192 174 174) !important;
+}
+.padd{
+    margin : auto;
+}
+.ifame{
+    border-radius: 5px !important;
+}
+.resName{
+    margin:5px auto 15px auto;
+    color: white !important;
+}
+.row{
+    margin: 0 !important;
 }
