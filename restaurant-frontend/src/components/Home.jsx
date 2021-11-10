@@ -29,10 +29,7 @@ const Home = () => {
               <h1>System</h1>
               <br />
               <h5 className="disabled-1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Choosing the best restaurant according to your preference is now just one click away. This recommender system is based on sentiment analysis of user's reviews and it's highly accurate. <br />Enjoy!
               </h5>
               <br /><br />
               <div className="disabled-1 row">
